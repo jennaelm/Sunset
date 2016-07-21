@@ -14,11 +14,7 @@ protocol DataManagerDelegate {
     func sunsetUpdated(time: String)
 }
 
-class DataManager : NSObject, NSXMLParserDelegate {
-    
-    class func sharedInstance() -> DataManager {
-        return dataManagerSingleton
-    }
+class DataManager : NSObject {
     
     let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var delegate : DataManagerDelegate?
@@ -97,6 +93,7 @@ class DataManager : NSObject, NSXMLParserDelegate {
             notification.timeZone = NSTimeZone.localTimeZone()
             notification.soundName = UILocalNotificationDefaultSoundName
             notification.repeatInterval = NSCalendarUnit.Day
+        
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
 
@@ -147,5 +144,3 @@ class DataManager : NSObject, NSXMLParserDelegate {
         }
     }
 }
-
-let dataManagerSingleton = DataManager()

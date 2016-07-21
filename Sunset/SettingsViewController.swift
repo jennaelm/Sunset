@@ -17,15 +17,20 @@ class SettingsViewController: UIViewController {
 
         // Go be free
         
-        if NSUserDefaults.standardUserDefaults().stringForKey("notificationPreference") == "10" {
-             self.segmentedControlBar.selectedSegmentIndex = 0
-        } else if NSUserDefaults.standardUserDefaults().stringForKey("notificationPreference") == "15" {
-             self.segmentedControlBar.selectedSegmentIndex = 1
-        } else if NSUserDefaults.standardUserDefaults().stringForKey("notificationPreference") == "20" {
-             self.segmentedControlBar.selectedSegmentIndex = 2
+        if let notificationPreference = NSUserDefaults.standardUserDefaults().stringForKey("notificationPreference") as String? {
+            switch notificationPreference {
+                case "10" :
+                    self.segmentedControlBar.selectedSegmentIndex = 0
+                case "15" :
+                    self.segmentedControlBar.selectedSegmentIndex = 1
+                case "20" :
+                    self.segmentedControlBar.selectedSegmentIndex = 2
+                default :
+                    return
+            }
         } else {
-             self.segmentedControlBar.selectedSegmentIndex = 1
-             NSUserDefaults.standardUserDefaults().setObject("15", forKey: "notificationPreference")
+            self.segmentedControlBar.selectedSegmentIndex = 1
+            NSUserDefaults.standardUserDefaults().setObject("15", forKey: "notificationPreference")
         }
     }
 

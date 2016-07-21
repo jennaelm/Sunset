@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B623247C1D21FC9E00E53405 /* SunsetObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623247A1D21FC9E00E53405 /* SunsetObject+CoreDataProperties.swift */; };
+		B623247D1D21FC9E00E53405 /* SunsetObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623247B1D21FC9E00E53405 /* SunsetObject.swift */; };
 		B647F6401CAF33B600F2EDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B647F63F1CAF33B600F2EDA0 /* AppDelegate.swift */; };
-		B647F6421CAF33B600F2EDA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B647F6411CAF33B600F2EDA0 /* ViewController.swift */; };
 		B647F6451CAF33B600F2EDA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B647F6431CAF33B600F2EDA0 /* Main.storyboard */; };
 		B647F6481CAF33B600F2EDA0 /* Sunset.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B647F6461CAF33B600F2EDA0 /* Sunset.xcdatamodeld */; };
 		B647F64A1CAF33B600F2EDA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B647F6491CAF33B600F2EDA0 /* Assets.xcassets */; };
 		B647F64D1CAF33B600F2EDA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B647F64B1CAF33B600F2EDA0 /* LaunchScreen.storyboard */; };
+		B67B1F1A1D205EEA001FA72D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B1F191D205EEA001FA72D /* DataManager.swift */; };
+		B67B1F1C1D20648D001FA72D /* SunsetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B1F1B1D20648D001FA72D /* SunsetViewController.swift */; };
+		B67B1F1E1D2064EC001FA72D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B1F1D1D2064EC001FA72D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B623247A1D21FC9E00E53405 /* SunsetObject+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SunsetObject+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B623247B1D21FC9E00E53405 /* SunsetObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunsetObject.swift; sourceTree = SOURCE_ROOT; };
 		B647F63C1CAF33B600F2EDA0 /* Sunset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B647F63F1CAF33B600F2EDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B647F6411CAF33B600F2EDA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B647F6441CAF33B600F2EDA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B647F6471CAF33B600F2EDA0 /* Sunset.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sunset.xcdatamodel; sourceTree = "<group>"; };
 		B647F6491CAF33B600F2EDA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B647F64C1CAF33B600F2EDA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B647F64E1CAF33B600F2EDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B67B1F191D205EEA001FA72D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B67B1F1B1D20648D001FA72D /* SunsetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunsetViewController.swift; sourceTree = "<group>"; };
+		B67B1F1D1D2064EC001FA72D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +65,15 @@
 			isa = PBXGroup;
 			children = (
 				B647F63F1CAF33B600F2EDA0 /* AppDelegate.swift */,
-				B647F6411CAF33B600F2EDA0 /* ViewController.swift */,
+				B67B1F191D205EEA001FA72D /* DataManager.swift */,
 				B647F6431CAF33B600F2EDA0 /* Main.storyboard */,
+				B67B1F1B1D20648D001FA72D /* SunsetViewController.swift */,
+				B67B1F1D1D2064EC001FA72D /* SettingsViewController.swift */,
 				B647F6491CAF33B600F2EDA0 /* Assets.xcassets */,
 				B647F64B1CAF33B600F2EDA0 /* LaunchScreen.storyboard */,
 				B647F64E1CAF33B600F2EDA0 /* Info.plist */,
+				B623247A1D21FC9E00E53405 /* SunsetObject+CoreDataProperties.swift */,
+				B623247B1D21FC9E00E53405 /* SunsetObject.swift */,
 				B647F6461CAF33B600F2EDA0 /* Sunset.xcdatamodeld */,
 			);
 			path = Sunset;
@@ -99,6 +111,7 @@
 				TargetAttributes = {
 					B647F63B1CAF33B600F2EDA0 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = J7RC77R7KS;
 					};
 				};
 			};
@@ -138,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B623247D1D21FC9E00E53405 /* SunsetObject.swift in Sources */,
 				B647F6481CAF33B600F2EDA0 /* Sunset.xcdatamodeld in Sources */,
-				B647F6421CAF33B600F2EDA0 /* ViewController.swift in Sources */,
+				B67B1F1A1D205EEA001FA72D /* DataManager.swift in Sources */,
+				B67B1F1C1D20648D001FA72D /* SunsetViewController.swift in Sources */,
+				B67B1F1E1D2064EC001FA72D /* SettingsViewController.swift in Sources */,
+				B623247C1D21FC9E00E53405 /* SunsetObject+CoreDataProperties.swift in Sources */,
 				B647F6401CAF33B600F2EDA0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,10 +268,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jenna Miller (J7RC77R7KS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jenna Miller (J7RC77R7KS)";
 				INFOPLIST_FILE = Sunset/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jennathriller.projects.Sunset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d7342899-3ea9-451a-8ce2-04782b0abd79";
 			};
 			name = Debug;
 		};
@@ -262,10 +282,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jenna Miller (J7RC77R7KS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jenna Miller (J7RC77R7KS)";
 				INFOPLIST_FILE = Sunset/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jennathriller.projects.Sunset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d7342899-3ea9-451a-8ce2-04782b0abd79";
 			};
 			name = Release;
 		};
@@ -288,6 +311,7 @@
 				B647F6531CAF33B600F2EDA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

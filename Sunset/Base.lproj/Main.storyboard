@@ -1,25 +1,161 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Npj-3p-kqZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Settings-->
+        <scene sceneID="sxq-SJ-bn0">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IeW-Mo-cjd" customClass="SettingsViewController" customModule="Sunset" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="lQ5-Vd-wJD"/>
+                        <viewControllerLayoutGuide type="bottom" id="BeG-km-0DK"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="EIT-0O-UK9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="W2E-Ku-CLb">
+                                <rect key="frame" x="20" y="74" width="560" height="29"/>
+                                <segments>
+                                    <segment title="10 min"/>
+                                    <segment title="15 min"/>
+                                    <segment title="20 min"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="IeW-Mo-cjd" eventType="valueChanged" id="O7d-LR-LDU"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="send notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFP-nQ-dXs">
+                                <rect key="frame" x="20" y="40" width="129" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="before sunset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spi-Oz-IbV">
+                                <rect key="frame" x="20" y="112" width="106" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunset times provided by sunrise-sunset.org " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tlg-iK-bHD">
+                                <rect key="frame" x="20" y="525" width="560" height="16"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W2E-Ku-CLb" firstAttribute="top" secondItem="vFP-nQ-dXs" secondAttribute="bottom" constant="10" id="3fm-2W-dFO"/>
+                            <constraint firstItem="W2E-Ku-CLb" firstAttribute="leading" secondItem="EIT-0O-UK9" secondAttribute="leading" constant="20" id="Ota-ys-BqE"/>
+                            <constraint firstItem="tlg-iK-bHD" firstAttribute="leading" secondItem="EIT-0O-UK9" secondAttribute="leading" constant="20" id="WVp-Qt-puS"/>
+                            <constraint firstItem="Spi-Oz-IbV" firstAttribute="top" secondItem="W2E-Ku-CLb" secondAttribute="bottom" constant="10" id="YLA-kQ-E2j"/>
+                            <constraint firstItem="vFP-nQ-dXs" firstAttribute="leading" secondItem="EIT-0O-UK9" secondAttribute="leading" constant="20" id="aPN-gv-XQa"/>
+                            <constraint firstAttribute="trailing" secondItem="W2E-Ku-CLb" secondAttribute="trailing" constant="20" id="bnG-hb-fta"/>
+                            <constraint firstAttribute="trailing" secondItem="tlg-iK-bHD" secondAttribute="trailing" constant="20" id="fSM-p1-jG0"/>
+                            <constraint firstItem="BeG-km-0DK" firstAttribute="top" secondItem="tlg-iK-bHD" secondAttribute="bottom" constant="10" id="m4m-CT-fMq"/>
+                            <constraint firstItem="vFP-nQ-dXs" firstAttribute="top" secondItem="lQ5-Vd-wJD" secondAttribute="bottom" constant="20" id="wtH-cH-Jba"/>
+                            <constraint firstItem="Spi-Oz-IbV" firstAttribute="leading" secondItem="EIT-0O-UK9" secondAttribute="leading" constant="20" id="yfy-Is-vqe"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="14R-vR-csK"/>
+                    <connections>
+                        <outlet property="segmentedControlBar" destination="W2E-Ku-CLb" id="CfR-SR-NHs"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oiq-GO-131" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-13" y="362"/>
+        </scene>
+        <!--Sunset-->
+        <scene sceneID="RYr-9S-FlC">
+            <objects>
+                <viewController id="NOm-Sn-CdE" customClass="SunsetViewController" customModule="Sunset" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="exd-YA-dla"/>
+                        <viewControllerLayoutGuide type="bottom" id="C0g-x8-xPv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HdK-7l-FZW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunset" translatesAutoresizingMaskIntoConstraints="NO" id="Ohk-dW-7Z4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunset" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h7-ds-Ytx">
+                                <rect key="frame" x="20" y="40" width="560" height="40"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="29"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bV7-sc-lWf">
+                                <rect key="frame" x="20" y="90" width="560" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="dQj-bG-sPc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Savor simple pleasures." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="syP-B8-fZX">
+                                <rect key="frame" x="10" y="519" width="580" height="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ohk-dW-7Z4" secondAttribute="trailing" id="6xB-Mu-lRk"/>
+                            <constraint firstItem="syP-B8-fZX" firstAttribute="leading" secondItem="HdK-7l-FZW" secondAttribute="leading" constant="10" id="7qZ-LI-a2t"/>
+                            <constraint firstAttribute="bottom" secondItem="Ohk-dW-7Z4" secondAttribute="bottom" id="831-R5-7WA"/>
+                            <constraint firstItem="bV7-sc-lWf" firstAttribute="top" secondItem="1h7-ds-Ytx" secondAttribute="bottom" constant="10" id="Nrb-SG-7gw"/>
+                            <constraint firstItem="1h7-ds-Ytx" firstAttribute="top" secondItem="exd-YA-dla" secondAttribute="bottom" constant="20" id="Rvd-ru-Uwr"/>
+                            <constraint firstAttribute="trailing" secondItem="1h7-ds-Ytx" secondAttribute="trailing" constant="20" id="Sj6-DX-gma"/>
+                            <constraint firstItem="1h7-ds-Ytx" firstAttribute="leading" secondItem="HdK-7l-FZW" secondAttribute="leading" constant="20" id="cXy-Ed-Z1o"/>
+                            <constraint firstItem="C0g-x8-xPv" firstAttribute="top" secondItem="syP-B8-fZX" secondAttribute="bottom" constant="10" id="dAz-pt-bGT"/>
+                            <constraint firstItem="Ohk-dW-7Z4" firstAttribute="top" secondItem="HdK-7l-FZW" secondAttribute="top" id="jsZ-kl-45b"/>
+                            <constraint firstAttribute="trailing" secondItem="syP-B8-fZX" secondAttribute="trailing" constant="10" id="kdw-Yv-8lx"/>
+                            <constraint firstItem="bV7-sc-lWf" firstAttribute="leading" secondItem="HdK-7l-FZW" secondAttribute="leading" constant="20" id="khY-H0-GkD"/>
+                            <constraint firstItem="Ohk-dW-7Z4" firstAttribute="leading" secondItem="HdK-7l-FZW" secondAttribute="leading" id="oDL-tS-JZL"/>
+                            <constraint firstAttribute="trailing" secondItem="bV7-sc-lWf" secondAttribute="trailing" constant="20" id="yB1-R5-vgI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sunset" id="cN9-LG-l4B"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="bV7-sc-lWf" id="b9t-6Y-U8F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oC7-tx-wTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="-299"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Va8-jT-CJN">
+            <objects>
+                <tabBarController id="Npj-3p-kqZ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="TjW-e0-IUw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="NOm-Sn-CdE" kind="relationship" relationship="viewControllers" id="QY8-2M-qi2"/>
+                        <segue destination="IeW-Mo-cjd" kind="relationship" relationship="viewControllers" id="5Ml-1S-mC8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQs-fq-wuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-833" y="32"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sunset" width="1024" height="659"/>
+    </resources>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

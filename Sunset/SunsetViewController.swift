@@ -42,6 +42,7 @@ class SunsetViewController: UIViewController, CLLocationManagerDelegate, DataMan
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         var userLocation = CLLocation()
+        
         if locations.count > 0 {
             userLocation = locations[0]
             locationManager.stopUpdatingLocation()

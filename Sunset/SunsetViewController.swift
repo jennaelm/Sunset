@@ -14,7 +14,7 @@ class SunsetViewController: UIViewController, CLLocationManagerDelegate, DataMan
     @IBOutlet weak var timeLabel: UILabel!
     
     let locationManager = CLLocationManager()
-    let dataManager : DataManager = DataManager()
+    let dataManager = DataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()

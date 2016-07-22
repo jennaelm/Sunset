@@ -17,7 +17,7 @@ class SettingsViewController: UIViewController {
 
         // Go be free
         
-        if let notificationPreference = NSUserDefaults.standardUserDefaults().stringForKey("notificationPreference") as String? {
+        if let notificationPreference = NSUserDefaults.standardUserDefaults().stringForKey("notificationPreference") {
             switch notificationPreference {
                 case "10" :
                     self.segmentedControlBar.selectedSegmentIndex = 0

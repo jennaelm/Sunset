@@ -81,7 +81,7 @@ class DataManager : NSObject {
             timeInterval = 15 as NSTimeInterval
         }
         
-        if UIApplication.sharedApplication().scheduledLocalNotifications != nil {
+        if UIApplication.sharedApplication().scheduledLocalNotifications?.count > 0 {
             UIApplication.sharedApplication().cancelAllLocalNotifications()
         }
         
@@ -95,6 +95,7 @@ class DataManager : NSObject {
             notification.repeatInterval = NSCalendarUnit.Day
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    
     }
 
 // Core Data
@@ -143,4 +144,5 @@ class DataManager : NSObject {
             }
         }
     }
+    
 }

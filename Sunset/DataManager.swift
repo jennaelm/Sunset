@@ -95,7 +95,6 @@ class DataManager : NSObject {
             notification.repeatInterval = NSCalendarUnit.Day
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
-    
     }
 
 // Core Data
@@ -141,6 +140,7 @@ class DataManager : NSObject {
             let infoFetched = results as? [SunsetObject]!
             for sunset in infoFetched! {
                 self.formatTime(sunset.time!)
+                self.createDailyNotifications(sunset.time!)
             }
         }
     }
